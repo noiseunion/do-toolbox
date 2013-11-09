@@ -7,8 +7,8 @@ require "digital_opera/version"
 Gem::Specification.new do |s|
   s.name        = "digital_opera"
   s.version     = DigitalOpera::VERSION
-  s.authors     = ["JD Hendrickson"]
-  s.email       = ["jd@digitalopera.com"]
+  s.authors     = ["JD Hendrickson", "Grant Klinsing"]
+  s.email       = ["support@digitalopera.com"]
   s.homepage    = "http://www.digitalopera.com/"
   s.summary     = "Tools and utilities for helping out in developing Ruby applications"
   s.description = "Tools and utilities for helping out in developing Ruby applications"
