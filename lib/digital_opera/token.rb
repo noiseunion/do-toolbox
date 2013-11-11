@@ -8,9 +8,8 @@
 module DigitalOpera
   class Token
     def self.generate(key_len = 40)
-        alphanumerics = ('a'..'z').to_a.concat(('A'..'Z').to_a.concat(('0'..'9').to_a))
-        secret_key    = alphanumerics.sort_by{rand}.join[0..key_len]
-        secret_key
+      alphanumerics = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map { |i| i.to_a }.flatten
+      (0...key_len).map{ alphanumerics[rand(alphanumerics.length)] }.join
     end
   end
 end

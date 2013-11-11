@@ -14,6 +14,10 @@ module DigitalOpera
       def _h
         @view_context
       end
+
+      def source
+        __getobj__
+      end
     end
   end
 end
