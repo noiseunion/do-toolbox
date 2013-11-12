@@ -10,7 +10,7 @@ If you do find this Gem to be useful, please let us know.
 
 ### Version 0.0.7
 
-- [Presenter::Base](/noiseunion/do-toolbox/wiki/DigitalOpera::Presenter::Base)
+- [Presenter::Base](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::Presenter::Base)
 - Token builder
 - nil_or_zero?
 - Banker
