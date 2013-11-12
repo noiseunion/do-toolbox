@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/digital_opera.png)](http://badge.fury.io/rb/digital_opera)
+[![Coverage Status](https://coveralls.io/repos/noiseunion/do-toolbox/badge.png)](https://coveralls.io/r/noiseunion/do-toolbox)
 
 # DigitalOpera
 
