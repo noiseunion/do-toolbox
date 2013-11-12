@@ -8,11 +8,13 @@ independently, and then we thought...maybe someone else would find them useful t
 
 If you do find this Gem to be useful, please let us know.
 
-## Version 0.0.7
+### Version 0.0.7
 
 - Presenter::Base
 - Token builder
 - nil_or_zero?
 - Banker
+
+### Licensing
 
 This project rocks and uses MIT-LICENSE.
