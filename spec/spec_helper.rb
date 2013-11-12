@@ -7,7 +7,7 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require 'rspec'
   require 'rspec/autorun'
-  require 'mocha/setup'
+  require 'mocha/api'
 
   # Configure RSpec ---------------------------------------
   RSpec.configure do |config|
