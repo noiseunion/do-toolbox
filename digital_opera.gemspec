@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Tools and utilities for helping out in developing Ruby applications"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "activesupport", ">= 3.1.0"
 
