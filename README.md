@@ -1,51 +1,18 @@
+![Digital Opera, LLC](http://digitalopera.com/wp-content/uploads/2013/10/large-logo.png)
+
 [![Gem Version](https://badge.fury.io/rb/digital_opera.png)](http://badge.fury.io/rb/digital_opera)
-[![Coverage Status](https://coveralls.io/repos/noiseunion/do-toolbox/badge.png)](https://coveralls.io/r/noiseunion/do-toolbox)
 
-# DigitalOpera
+This Gem was created to store all of the crazy tricks, hacks and practices used by Digital Opera in various Ruby 
+based projects.  We figured it was easier to throw them all in a Gem than to keep copying them into projects 
+independently, and then we thought...maybe someone else would find them useful too!
 
-## Presenter/Decorator
+If you do find this Gem to be useful, please let us know.
 
-Presenters allow a nice way to 'present' model data without adding methods directly to the model.
+## Version 0.0.7
 
-To create a presenter:
-
-```ruby
-class UserPresenter < DigitalOpera::Presenter::Base
-  def name
-    if self.first_name.present? && self.last_name.present?
-      "#{self.first_name} #{self.last_name}"
-    else
-      self.email
-    end
-  end
-end
-```
-
-Instantiation:
-```ruby
-UserPresenter.new(User.first)
-```
-
-Use:
-
-```ruby
-presenter = UserPresenter.new(User.first)
-
-presenter.name # John Doe or john.doe@example.com
-presenter.first_name # John
-```
-
-### Methods
-
-#### .source
-If you need to get the source object, you can call `source` on the presenter instance.
-
-```ruby
-presenter # instance of UserPresenter
-presenter.source # instance of User
-```
-
-#### ._h
-User `_h` to get the view_context
+- Presenter::Base
+- Token builder
+- nil_or_zero?
+- Banker
 
 This project rocks and uses MIT-LICENSE.
