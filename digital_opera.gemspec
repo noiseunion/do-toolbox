@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.homepage    = "http://www.digitalopera.com/"
   s.summary     = "Tools and utilities for helping out in developing Ruby applications"
   s.description = "Tools and utilities for helping out in developing Ruby applications"
-
+  s.license     = 'MIT'
+  
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
 
