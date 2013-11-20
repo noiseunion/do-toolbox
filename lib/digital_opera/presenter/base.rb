@@ -18,6 +18,10 @@ module DigitalOpera
       def source
         __getobj__
       end
+
+      def method_missing(sym, *args, &block)
+        source.send sym, *args, &block
+      end
     end
   end
 end
