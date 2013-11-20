@@ -6,13 +6,17 @@ require 'action_controller'
 describe DigitalOpera::Presenter::Base do
   let(:user) { User.new }
 
-  describe 'delegating to base class' do
+  describe 'base class' do
     subject{ DigitalOpera::Presenter::Base.new user }
 
-    its(:first_name){ should eq 'John' }
-    its(:last_name){ should eq 'Doe' }
     its(:source) { should eq user }
     its(:_h) { should be_respond_to :view_renderer }
+  end
+
+  describe 'delegating to base class' do
+    subject{ BasePresenter.new user }
+
+    its(:family_name) { should eq 'Dido' }
   end
 
   describe 'overridden methods' do

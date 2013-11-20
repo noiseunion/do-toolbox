@@ -12,4 +12,8 @@ class User
   def last_name
     'Doe'
   end
+
+  def family_name
+    'Dido'
+  end
 end
