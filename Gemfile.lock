@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    digital_opera (0.0.7)
+    digital_opera (0.0.8)
       activesupport (>= 3.1.0)
 
 GEM
