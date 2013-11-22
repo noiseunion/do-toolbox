@@ -25,4 +25,4 @@
 )(window.digitalOpera)
 
 $('[data-does="animate-ellipsis"]').each (idx, ele) ->
-  window.digitalOpera(ele)
+  window.digitalOpera.ellipsis(ele)
