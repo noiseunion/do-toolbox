@@ -8,6 +8,18 @@ independently, and then we thought...maybe someone else would find them useful t
 
 If you do find this Gem to be useful, please let us know.
 
+### Version 0.0.9
+- [digital_opera.js](https://github.com/noiseunion/do-toolbox/wiki/digital_opera.js)
+- [ellipsis.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/ellipsis.js.coffee)
+- [events.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/events.js.coffee)
+- [forms.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/forms.js.coffee)
+- [preload_images.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/preload_images.js.coffee)
+- [strings.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/strings.js.coffee)
+- [tables.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/tables.js.coffee)
+
+### Version 0.0.8
+- [DigitalOpera::Presenter::Base](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::Presenter::Base) now delegates method_missing to source
+
 ### Version 0.0.7
 
 - [DigitalOpera::Presenter::Base](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::Presenter::Base)
