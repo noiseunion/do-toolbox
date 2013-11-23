@@ -24,7 +24,7 @@ window.digitalOpera = window.digitalOpera || {};
 })(window.digitalOpera);
 
 $('[data-does="animate-ellipsis"]').each(function(idx, ele) {
-  return window.digitalOpera(ele);
+  return window.digitalOpera.ellipsis(ele);
 });
 
 (function(d) {
