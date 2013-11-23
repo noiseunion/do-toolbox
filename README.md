@@ -8,6 +8,9 @@ independently, and then we thought...maybe someone else would find them useful t
 
 If you do find this Gem to be useful, please let us know.
 
+### Version 0.0.10
+- Bug fix in [ellipsis.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/ellipsis.js.coffee)
+
 ### Version 0.0.9
 - [digital_opera.js](https://github.com/noiseunion/do-toolbox/wiki/digital_opera.js)
 - [ellipsis.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/ellipsis.js.coffee)
