@@ -22,7 +22,7 @@ describe("ellipsis", function() {
 
       jasmine.clock().tick(751);
 
-      // expect('boot').toBe(true);
+      expect('boot').toBe(true);
       expect(element.text().length).toBe(2);
 
       jasmine.clock().tick(751);
