@@ -18,22 +18,15 @@ describe("events", function() {
       it("should return true", function() {
         var loggedEvent;
 
-        runs(function(){
-          first.on('click', function(e){
-            loggedEvent = e;
-          });
-          setTimeout(function(){
-            first.click();
-          });
+        first.on('click', function(e){
+          loggedEvent = e;
         });
 
-        waitsFor(function(){
-          return typeof loggedEvent !== 'undefined';
-        }, 'waiting for click', 1000)
+        first.click();
 
-        runs(function(){
-          expect(window.digitalOpera.isClickOutsideElement(loggedEvent, second)).toBe(true);
-        });
+        jasmine.clock().tick(1000);
+
+        expect(window.digitalOpera.isClickOutsideElement(loggedEvent, second)).toBe(true);
       });
     });
 
@@ -41,43 +34,25 @@ describe("events", function() {
       it("should return false if click is on element inside", function() {
         var loggedEvent;
 
-        runs(function(){
-          second.on('click', function(e){
-            loggedEvent = e;
-          });
-          setTimeout(function(){
-            second.click();
-          });
+        second.on('click', function(e){
+          loggedEvent = e;
         });
+        second.click();
 
-        waitsFor(function(){
-          return typeof loggedEvent !== 'undefined';
-        }, 'waiting for click', 1000)
+        jasmine.clock().tick(1000);
 
-        runs(function(){
-          expect(window.digitalOpera.isClickOutsideElement(loggedEvent, first)).toBe(false);
-        });
+        expect(window.digitalOpera.isClickOutsideElement(loggedEvent, first)).toBe(false);
       });
 
       it("should return false if click was on element", function() {
         var loggedEvent;
 
-        runs(function(){
-          second.on('click', function(e){
-            loggedEvent = e;
-          });
-          setTimeout(function(){
-            second.click();
-          });
+        second.on('click', function(e){
+          loggedEvent = e;
         });
+        second.click();
 
-        waitsFor(function(){
-          return typeof loggedEvent !== 'undefined';
-        }, 'waiting for click', 1000)
-
-        runs(function(){
-          expect(window.digitalOpera.isClickOutsideElement(loggedEvent, second)).toBe(false);
-        });
+        expect(window.digitalOpera.isClickOutsideElement(loggedEvent, second)).toBe(false);
       });
     });
   });
