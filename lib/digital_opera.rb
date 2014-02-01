@@ -5,7 +5,10 @@ require "digital_opera/banker"
 require "digital_opera/presenter/base"
 require "digital_opera/document"
 require "digital_opera/form_object"
-require "digital_opera/services/s3"
+
+if defined?(AWS)
+  require "digital_opera/services/s3"
+end
 
 module DigitalOpera
 end

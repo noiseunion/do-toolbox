@@ -1,4 +1,5 @@
 require 'aws'
+
 ## Service for handling interactions with S3
 ##
 module DigitalOpera
