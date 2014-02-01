@@ -12,65 +12,53 @@ describe("preload_images", function() {
       expect(function(){window.digitalOpera.preloadImages([google])}).not.toThrow();
     });
 
-    it('should callback once a single image loaded', function(){
-      var images,
-          callbackCalled = false;
+    describe('single image', function(){
+      var images, callbackCalled = false;
 
-      runs(function(){
+      beforeEach(function(done) {
         images = window.digitalOpera.preloadImages(google, function(){
-          callbackCalled = true;
+          done();
         });
       });
 
-      waitsFor(function(){
-        return callbackCalled == true;
-      }, 'callback should have been called', 5000);
-
-      runs(function(){
+      it('should callback once a single image loaded', function(done){
         expect(images[0].complete).toBe(true);
+        done();
       });
 
     });
 
-    it('should callback once all images are loaded', function(){
-      var images,
-          callbackCalled = false;
+    describe('multiple image', function(){
+      var images, callbackCalled = false;
 
-      runs(function(){
+      beforeEach(function(done) {
         images = window.digitalOpera.preloadImages([google, yahoo], function(){
-          callbackCalled = true;
+          done();
         });
       });
 
-      waitsFor(function(){
-        return callbackCalled == true;
-      }, 'callback should have been called', 5000);
-
-      runs(function(){
+      it('should callback once all images are loaded', function(done){
         expect(images[0].complete).toBe(true);
         expect(images[1].complete).toBe(true);
+        done();
       });
 
     });
 
-    it('should callback if there was an error', function(){
-      var images,
-          callbackCalled = false;
+    describe('bad image', function(){
+      var images, callbackCalled = false;
 
-      runs(function(){
-        images = window.digitalOpera.preloadImages(bad, function(){
-          callbackCalled = true;
+      beforeEach(function(done) {
+        images = window.digitalOpera.preloadImages([google, yahoo], function(){
+          done();
         });
       });
 
-      waitsFor(function(){
-        return callbackCalled == true;
-      }, 'callback should have been called', 5000);
-
-      runs(function(){
+      it('should callback if there was an error', function(done){
         expect(images[0].complete).toBe(true);
+        done();
       });
-    });
 
+    });
   });
 });

@@ -1,5 +1,5 @@
 namespace :spec do
   task :js do
-    system("ruby ./tasks/build_js_specs.rb") or exit!(1)
+    system("cd spec/dummy && bundle exec rake jasmine:ci") or exit!(1)
   end
 end

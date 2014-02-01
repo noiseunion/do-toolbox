@@ -19,7 +19,7 @@ describe("tables", function() {
     });
 
     it('should open new window if has data-does="open-window"', function(){
-      spyOn(window, 'open').andReturn(focusObject);
+      spyOn(window, 'open').and.returnValue(focusObject);
       table.find('tr:first').attr('data-does', 'open-window');
       table.find('tr:first').click();
       expect(window.open).toHaveBeenCalled();
@@ -28,7 +28,7 @@ describe("tables", function() {
     it('should not follow link if click is within the anchor', function(){
       var anchor = $('<a href="http://bing.com">my link</a>')
       table.find('tr:first td:first').append(anchor);
-      spyOn(window, 'open').andReturn(focusObject);
+      spyOn(window, 'open').and.returnValue(focusObject);
       spyOn(window.digitalOpera.forTestingPurposes, 'getWindowLocation');
       anchor.click();
       expect(window.open).not.toHaveBeenCalled();
@@ -38,7 +38,7 @@ describe("tables", function() {
     it('should not follow link if click is within a span within the anchor', function(){
       var anchor = $('<a href="http://bing.com"><span>my link</span></a>')
       table.find('tr:first td:first').append(anchor);
-      spyOn(window, 'open').andReturn(focusObject);
+      spyOn(window, 'open').and.returnValue(focusObject);
       spyOn(window.digitalOpera.forTestingPurposes, 'getWindowLocation');
       anchor.find('span').click();
       expect(window.open).not.toHaveBeenCalled();
