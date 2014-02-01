@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard', '~> 2.2.3'
   s.add_development_dependency 'guard-rspec', '~> 2.3.0'
   s.add_development_dependency 'guard-spork', '~> 1.5.0'
+  s.add_development_dependency 'bundler'
 end
