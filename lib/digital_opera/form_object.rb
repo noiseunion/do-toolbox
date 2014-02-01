@@ -7,5 +7,7 @@
 ##
 require_relative 'form_object/base'
 
-module FormObject
+module DigitalOpera
+  module FormObject
+  end
 end
