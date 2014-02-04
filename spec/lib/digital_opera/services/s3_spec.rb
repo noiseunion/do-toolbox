@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative "../../../../lib/digital_opera/services/s3"
 
 describe DigitalOpera::Services::S3 do
   let(:document){ Document.new s3_key: "documents/#{doc_name}" }

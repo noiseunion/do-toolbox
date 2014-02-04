@@ -10,6 +10,7 @@ Spork.prefork do
   require 'mocha/api'
 
   require 'confstruct'
+  require 'aws'
 
   Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
