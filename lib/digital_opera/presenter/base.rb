@@ -22,6 +22,10 @@ module DigitalOpera
       def method_missing(sym, *args, &block)
         source.send sym, *args, &block
       end
+
+      def self.wrap(collection)
+        collection.map{ |obj| self.new(obj) }
+      end
     end
   end
 end
