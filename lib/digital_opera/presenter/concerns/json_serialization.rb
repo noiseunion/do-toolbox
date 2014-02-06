@@ -21,7 +21,7 @@ module DigitalOpera
 
       module ClassMethods
         def include_in_json(*method_names)
-          return @json_method_names if method_names.empty?
+          return (@json_method_names || []) if method_names.empty?
           @json_method_names = method_names
         end
       end
