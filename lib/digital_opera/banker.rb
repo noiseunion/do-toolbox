@@ -36,7 +36,7 @@ module DigitalOpera
     def banker_convert_currency(value, conversion)
       case conversion.to_sym
       when :to_cents
-        return (value.to_s.gsub(/,/, '').to_f * 100).to_i
+        return (value.to_s.gsub(/,/, '').to_d * 100).to_i
       when :to_dollars
         return "%0.2f" % (value.to_f / 100)
       end

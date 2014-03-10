@@ -11,13 +11,13 @@ describe DigitalOpera::Banker do
 
   context 'from string' do
     it 'should convert to cents' do
-      subject.money_in_account = '15.31'
-      subject.money_in_account_in_cents.should eq 1531
+      subject.money_in_account = '16.31'
+      subject.money_in_account_in_cents.should eq 1631
     end
 
     it 'should convert to cents' do
-      subject.money_in_account_in_cents = '1531'
-      subject.money_in_account.should eq '15.31'
+      subject.money_in_account_in_cents = '1631'
+      subject.money_in_account.should eq '16.31'
     end
   end
 
