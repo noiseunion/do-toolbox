@@ -1,4 +1,4 @@
-![Digital Opera, LLC](http://digitalopera.com/wp-content/uploads/2013/10/large-logo.png)
+![Digital Opera, LLC](http://digitalopera.com/wp-content/uploads/2014/03/logo-symbol-text-orange-gary.png)
 
 [![Gem Version](https://badge.fury.io/rb/digital_opera.png)](http://badge.fury.io/rb/digital_opera)
 
