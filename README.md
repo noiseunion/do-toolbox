@@ -2,11 +2,17 @@
 
 [![Gem Version](https://badge.fury.io/rb/digital_opera.png)](http://badge.fury.io/rb/digital_opera)
 
-This Gem was created to store all of the crazy tricks, hacks and practices used by Digital Opera in various Ruby 
-based projects.  We figured it was easier to throw them all in a Gem than to keep copying them into projects 
+This Gem was created to store all of the crazy tricks, hacks and practices used by Digital Opera in various Ruby
+based projects.  We figured it was easier to throw them all in a Gem than to keep copying them into projects
 independently, and then we thought...maybe someone else would find them useful too!
 
 If you do find this Gem to be useful, please let us know.
+
+### Version 0.0.13
+- Added [DigitalOpera::States](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::States). This file is not included by default. Be sure to add `require 'digital_opera/states'` in the application.rb
+
+### Version 0.0.12
+- Bug fix in Banker - was causing float multiplication rounding error
 
 ### Version 0.0.10
 - Bug fix in [ellipsis.js.coffee](https://github.com/noiseunion/do-toolbox/wiki/ellipsis.js.coffee)
