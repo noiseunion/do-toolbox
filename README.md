@@ -8,6 +8,9 @@ independently, and then we thought...maybe someone else would find them useful t
 
 If you do find this Gem to be useful, please let us know.
 
+### Version 0.0.14
+- Updated [DigitalOpera::States](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::States) to accept a mapping parameter to define keys and values
+
 ### Version 0.0.13
 - Added [DigitalOpera::States](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::States). This file is not included by default. Be sure to add `require 'digital_opera/states'` in the application.rb
 

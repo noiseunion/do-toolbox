@@ -17,6 +17,62 @@ describe DigitalOpera::States do
     it 'should have a key matching the name' do
       subject.to_collection.all?{|item| item.first[0] == item.last[0] }.should be_true
     end
+
+    context 'when mapping is supplied' do
+      subject{ DigitalOpera::States.to_collection({key: :abbr, value: :name}) }
+
+      it 'should not raise error' do
+        expect{ subject }.to_not raise_error
+      end
+
+      it 'should have abbreviation as key' do
+        subject.first.last.should eq 'AL'
+      end
+
+      it 'should have name as key' do
+        subject = DigitalOpera::States.to_collection({key: :name})
+        subject.first.last.should eq 'Alabama'
+      end
+
+      it 'should have abbreviation as key' do
+        subject = DigitalOpera::States.to_collection({key: :abbr})
+        subject.first.last.should eq 'AL'
+      end
+
+      it 'should have name as value' do
+        subject = DigitalOpera::States.to_collection({value: :name})
+        subject.first.first.should eq 'Alabama'
+      end
+
+      it 'should have abbreviation as value' do
+        subject = DigitalOpera::States.to_collection({value: :abbr})
+        subject.first.first.should eq 'AK'
+      end
+
+      it 'should have name as key and name as value' do
+        subject = DigitalOpera::States.to_collection({key: :name, value: :name})
+        subject.first.first.should eq 'Alabama'
+        subject.first.last.should eq 'Alabama'
+      end
+
+      it 'should have abbreviation as key and abbreviation as value' do
+        subject = DigitalOpera::States.to_collection({key: :abbr, value: :abbr})
+        subject.first.first.should eq 'AK'
+        subject.first.last.should eq 'AK'
+      end
+
+      it 'should have name as key and abbreviation as value' do
+        subject = DigitalOpera::States.to_collection({key: :name, value: :abbr})
+        subject.first.first.should eq 'AK'
+        subject.first.last.should eq 'Alaska'
+      end
+
+      it 'should have abbreviation as key and name as value' do
+        subject = DigitalOpera::States.to_collection({key: :abbr, value: :name})
+        subject.first.first.should eq 'Alabama'
+        subject.first.last.should eq 'AL'
+      end
+    end
   end
 
   describe '#abbreviations' do

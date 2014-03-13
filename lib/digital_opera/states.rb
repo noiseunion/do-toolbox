@@ -54,8 +54,34 @@ module DigitalOpera
       ['Wyoming', 'WY']
     ]
 
-    def self.to_collection
-      @collection ||= US_STATES.sort{|a, b| a.first <=> b.first }
+    def self.to_collection(mapping={})
+      @collection = (
+        states = US_STATES
+
+        if mapping[:key].present? || mapping[:value].present?
+          states =US_STATES.map do |state|
+            key = state.last
+            value = state.first
+
+            if mapping[:value] == :abbr
+              value = state.last
+            elsif mapping[:value] == :name
+              value = state.first
+            end
+
+            if mapping[:key] == :name
+              key = state.first
+            elsif mapping[:key] == :abbr
+              key = state.last
+            end
+
+            [value, key]
+
+          end
+        end
+
+        states.sort{|a, b| a.first <=> b.first }
+      )
     end
 
     def self.abbreviations
