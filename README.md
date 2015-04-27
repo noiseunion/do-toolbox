@@ -8,7 +8,7 @@ independently, and then we thought...maybe someone else would find them useful t
 
 If you do find this Gem to be useful, please let us know.
 
-### Version 0.0.15
+### Version 0.0.16
 - Updated [DigitalOpera::States](https://github.com/noiseunion/do-toolbox/wiki/DigitalOpera::States) to include US territories
 
 ### Version 0.0.14
