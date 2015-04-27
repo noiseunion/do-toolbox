@@ -11,8 +11,8 @@
   d.titleize = (str) ->
     arr = str.split(' ')
     newString = ''
-    for string in arr
-      arr[_i] = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+    for string, index in arr
+      arr[index] = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
     arr.join(' ')
 
   # @method formatJSONErrors
