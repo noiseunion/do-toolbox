@@ -6,16 +6,12 @@ describe DigitalOpera::States do
 
   describe '#to_collection' do
     its(:to_collection){ should include ['Alabama', 'AL']}
-    it 'should have 51 records' do
-      subject.to_collection.size.should eq 51
+    it 'should have 59 records' do
+      subject.to_collection.size.should eq 59
     end
 
     it 'should have a collection of arrays' do
       subject.to_collection.all?{ |item| item.is_a?(Array) }.should eq true
-    end
-
-    it 'should have a key matching the name' do
-      subject.to_collection.all?{|item| item.first[0] == item.last[0] }.should be_true
     end
 
     context 'when mapping is supplied' do
@@ -79,8 +75,8 @@ describe DigitalOpera::States do
     its(:abbreviations){ should be_is_a Array }
     its(:abbreviations){ should include 'AK' }
 
-    it 'should have 51 records' do
-      subject.abbreviations.size.should eq 51
+    it 'should have 59 records' do
+      subject.abbreviations.size.should eq 59
     end
   end
 
@@ -88,8 +84,8 @@ describe DigitalOpera::States do
     its(:names){ should be_is_a Array }
     its(:names){ should include 'Wyoming' }
 
-    it 'should have 51 records' do
-      subject.names.size.should eq 51
+    it 'should have 59 records' do
+      subject.names.size.should eq 59
     end
   end
 
@@ -192,10 +188,6 @@ describe DigitalOpera::States do
 
     it 'should values of names' do
       subject.to_hash.values.all?{|key| key.size.should > 2 }
-    end
-
-    it 'should have a key matching the name' do
-      subject.to_hash.all?{|key, value| key[0] == value[0] }.should be_true
     end
   end
 end
